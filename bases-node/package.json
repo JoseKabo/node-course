@@ -1,0 +1,19 @@
+{
+    "name": "bases-node",
+    "version": "1.0.0",
+    "description": "Im studying Node js",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "base5": ""
+    },
+    "author": "JoseKabo",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "yargs": "^17.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.12"
+    }
+}
