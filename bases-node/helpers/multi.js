@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const fileBuilder = async(base = 2) => {
+const fileBuilder = async(base = 2, listar = false, to = 10) => {
     try {
         let output = '';
         output += `
@@ -9,13 +9,15 @@ const fileBuilder = async(base = 2) => {
             ========================================
         `;
 
-        for (let i = 1; i < 11; i++) {
+        for (let i = 1; i < to + 1; i++) {
             output += `${base} X ${i} = ${ base * i}\n`;
         }
 
-        fs.writeFileSync(`tabla-${base}.txt`, outcput);
-        console.log(output);
-        return `tabla-${base}.txt`;
+        fs.writeFileSync(`./output-files/tabla-${base}-to${to}.txt`, output);
+        if (listar) {
+            console.log(output);
+        }
+        return `tabla-${base}-to-${to}.txt`;
     } catch (error) {
         throw error;
     }

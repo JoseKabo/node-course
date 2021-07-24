@@ -1,1 +1,1 @@
-node
+This is a node course
