@@ -1,2 +1,4 @@
 /bases-node/node_modules
 /bases-node/*.txt
+
+/my-tasks/node_modules
