@@ -2,3 +2,6 @@
 /bases-node/*.txt
 
 /my-tasks/node_modules
+
+/weather-console/node_modules
+/weather-console/.env

@@ -1,11 +1,21 @@
 {
-  "name": "weather-console",
-  "version": "1.0.0",
-  "description": "This iis a weather console app for get weather to different places",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "JoseKabo",
-  "license": "ISC"
+    "name": "weather-console",
+    "version": "1.0.0",
+    "description": "This iis a weather console app for get weather to different places",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "url": "https://github.com/JoseKabo/node-course/tree/master/weather-console"
+    },
+    "author": "JoseKabo",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "colors": "^1.4.0",
+        "dotenv": "^10.0.0",
+        "inquirer": "^8.1.2"
+    }
 }
