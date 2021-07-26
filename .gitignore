@@ -5,3 +5,6 @@
 
 /weather-console/node_modules
 /weather-console/.env
+
+/webServer/node_modules
+/webServer/.env
