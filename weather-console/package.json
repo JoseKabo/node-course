@@ -1,0 +1,11 @@
+{
+  "name": "weather-console",
+  "version": "1.0.0",
+  "description": "This iis a weather console app for get weather to different places",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JoseKabo",
+  "license": "ISC"
+}
