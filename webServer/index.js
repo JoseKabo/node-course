@@ -35,6 +35,6 @@ app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/404.html');
 })
 
-app.listen(() => {
+app.listen(port, () => {
     console.log('lISTENING APP IN ', port);
 });
