@@ -1,16 +1,17 @@
 {
-  "name": "restserver",
-  "version": "1.0.0",
-  "description": "This a sample rest server",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "JoseKabo",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1"
-  }
+    "name": "restserver",
+    "version": "1.0.0",
+    "description": "This a sample rest server",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "JoseKabo",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1"
+    }
 }
