@@ -8,3 +8,5 @@
 
 /webServer/node_modules
 /webServer/.env
+
+/RESTServer/node_modules
