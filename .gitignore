@@ -10,3 +10,5 @@
 /webServer/.env
 
 /RESTServer/node_modules
+
+/socketiio/node_modules

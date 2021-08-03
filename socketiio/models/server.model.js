@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const { dbCnn } = require('../database/config');
 
 class Server {
 
@@ -8,18 +7,20 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.usersPath = '/api/users';
-
-        // connection
-        this.dbConnection();
+        this.server = require('http').createServer(this.app);
+        this.io = require('socket.io')(this.server);
 
         // middlewares
         this.middlewares();
 
-        this.routes();
+        // this.routes();
+
+        // sockets
+        this.sockets();
     }
 
     get customCors() {
-        var whitelist = ['http://localhost:3000', 'http://example2.com']
+        var whitelist = ['http://localhost:4000', 'http://example2.com']
         return {
             origin: function(origin, callback) {
                 if (whitelist.indexOf(origin) !== -1) {
@@ -32,24 +33,26 @@ class Server {
         }
     }
 
-    async dbConnection() {
-        await dbCnn();
-    }
 
     routes() {
-        this.app.use(this.usersPath, require('../routes/user.routes'));
+        // this.app.use(this.usersPath, require('../routes/user.routes'));
     }
 
     listenerServer() {
-        this.app.listen(this.port, () => {
-            console.log('RESTServer by josekabo listening in ', this.port);
+        this.server.listen(this.port, () => {
+            console.log('SocketServer by josekabo listening in ', this.port);
         });
     }
 
     middlewares() {
-        this.app.use(cors());
-        this.app.use(express.json());
+        // this.app.unsubscribe(cors(this.customCors));
         this.app.use(express.static('public'));
+    }
+
+    sockets() {
+        this.io.on('connection', socket => {
+            console.log('client connected', socket.id);
+        });
     }
 
 }
