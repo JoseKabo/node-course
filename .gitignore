@@ -11,4 +11,8 @@
 
 /RESTServer/node_modules
 
+/RESTCoffee/node_modules
+/RESTCoffee/.env
+
 /socketiio/node_modules
+

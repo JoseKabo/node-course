@@ -15,13 +15,7 @@ const usersGET = (req = request, res = response) => {
 
 
 const usersPOST = async(req = request, res = response) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({
-            ok: false,
-            msg: errors
-        });
-    }
+
 
     const { name, email, password, role } = req.body;
     const user = new User({ name, email, password, role });
